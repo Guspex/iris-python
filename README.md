@@ -8,7 +8,7 @@ Make sure you have [Node.js](https://nodejs.org/pt-br/blog/release/v14.18.0) ins
 Clone/git pull the repo into any local directory 
  
 ``` 
-$ git clone https://github.com/intersystems-community/intersystems-iris-dev-template.git 
+$ git clone https://github.com/Guspex/iris-python.git 
 ``` 
  
 Open the terminal in this directory and call the command to build and run InterSystems IRIS in container: 
@@ -44,7 +44,7 @@ $ npm start
 ```
  
 ## What does it do 
-THe sample repository contains a simplest example of ObjectScript classe: ObjectScript method whith Python that returns value and method that creates a persistent record.
+The sample repository contains a simplest example of ObjectScript classe: ObjectScript method whith Python that returns value and method that creates a persistent record.
  
 1. Open IRIS terminal and run the ObjectScript Test() method to see if runs the script and returns values from IRIS: 
  
