@@ -35,6 +35,13 @@ To exit the terminal, do any of the following:
 ``` 
 Enter HALT or H (not case-sensitive) 
 ``` 
+### FrontEnd installation
+``` 
+Navigate to the FrontEnd folder in the terminal and perform the following commands.
+$ npm i
+$ npm audit fix --force (If you have some problem) *(Sometimes you need to go through it twice)
+$ npm start
+```
  
 ## What does it do 
 THe sample repository contains a simplest example of ObjectScript classe: ObjectScript method whith Python that returns value and method that creates a persistent record.
