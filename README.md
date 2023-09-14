@@ -15,10 +15,12 @@ Open the terminal in this directory and call the command to build and run InterS
 *Note: Users running containers on a Linux CLI, should use "docker compose" instead of "docker-compose"* 
 *See [Install the Compose plugin](https://docs.docker.com/compose/install/linux/)* 
  
- 
- 
 ``` 
 $ docker-compose up -d 
+``` 
+
+``` 
+$ pip3 install matplotlib 
 ``` 
  
 To open IRIS Terminal do: 
