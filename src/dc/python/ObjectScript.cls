@@ -13,17 +13,15 @@ ClassMethod IrradiationAnalysis() As %Status
 	Set tSC = $System.Status.OK()
 
 	Set tRetornoImagem = ..Python()
-		
-	Set tSaida = {}
-    Do tSaida.%Set("arquivo",tRetornoImagem)
-	Write tSaida
+	
+	Write tRetornoImagem
         
 	Quit tSC
 }
 
 ClassMethod Python() As %String [ Language = python ]
 {
-
+ 
 	import iris
 	import pandas as pd
 	import base64 as bs
@@ -113,7 +111,7 @@ ClassMethod Python() As %String [ Language = python ]
 	buildBinary(labelPR)
 	buildBinary(labelSC)
 	buildBinary(labelRS)
-	buildBinary(labelAll)
+	buildBinary(labelAll) 
 	
 	return "Graphics and Binary files created"
 }

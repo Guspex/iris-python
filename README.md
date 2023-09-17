@@ -14,6 +14,10 @@ Lastly, our color-coded graphics featured a gradient that effectively conveyed t
 
 In summary, our study was a data-driven exploration of solar irradiation patterns in the southern Brazilian region. Leveraging advanced data analysis techniques, machine learning algorithms, and data visualization tools, we aimed to provide valuable insights into the solar energy landscape of this region, which can inform sustainable energy policies and environmental decisions.
 
+### Observation
+
+PS. If you are unable to run the volume in Docker to create the files via code, we have already made the files ready for viewing in Front so you can get an idea of ​​how the tool works.
+
 ## Prerequisites 
 Make sure you have [git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) and [Docker desktop](https://www.docker.com/products/docker-desktop) installed. 
 ### Frontend 
@@ -64,10 +68,10 @@ it should return something like this:
 ```
 Machine Learning and Pandas functions
 Method call:
-It works!
+It works! 42
 42
 Iris Version:
-IRIS for UNIX (Ubuntu Server LTS for ARM64 Containers) 2023.2 (Build 227U) Mon Jul 31 2023 17:43:25 EDT
+IRIS for UNIX (Ubuntu Server LTS for x86-64 Containers) 2023.2 (Build 227U) Mon Jul 31 2023 18:04:28 EDT
 Creating new record in dc.python.PersistentClass
 1
 Printing one IRIS Object Dump:
@@ -78,18 +82,24 @@ Printing one IRIS Object Dump:
 | reference count: 1
 +----------------- attribute values ------------------
 |       %Concurrency = 1  <Set>
-|               Test = "2023-09-03 10:56:45.227577"
+|               Test = "2023-09-17 16:21:34.580585"
 +-----------------------------------------------------
 1
 Running SQL query Select * from dc_python.PersistentClass
-[0]: ['1', '2023-09-03 10:56:45.227577']
+[0]: ['1', '2023-09-17 16:21:34.580585']
 Printing the whole global of the persistence storage for the class dc.python.PersistentClass:^dc.Package4C8F.PersistentC1A93D
-key=['1']: 2023-09-03 10:56:45.227577
+key=['1']: ☻☺∟☺2023-09-17 16:21:34.580585
 André Dienes Friedrich
 Henrique Matheus Savi
 João Victor Prestes de Cruz
-lucca Gian Kolenez
+Lucca Gian Kolenez
 ```
+
+```bash
+# to Exit
+$ exit
+```
+
 ### Working with Python libs from ObjectScript
 Open IRIS terminal:
 
@@ -105,9 +115,16 @@ It works! 42
 ```
 
 The second test demonstrates the call to a standard python library working with dates datetime
+To do this, make sure that the docker volume path was created and is correct in the project, they are referenced in lines 75, 81, 83 in the ObjectScript.cls file located in the src/dc/python folder
+
 ```objectscript
-IRISAPP>d ##class(dc.python.ObjectScript).Python()
+IRISAPP>d ##class(dc.python.ObjectScript).IrradiationAnalysis()
 Graphics and Binary files created
+```
+
+```bash
+# to Exit
+$ IRISAPP>h
 ```
 
 ### FrontEnd installation

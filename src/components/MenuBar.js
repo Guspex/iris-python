@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import './style.css'; 
 import imgRegion from'../Southern region of Brazil.png'
-import pr from'../State of Paraná.png'
+import pr from'../State of Parana.png'
 import sc from'../State of Santa Catarina.png'
 import rs from'../State of Rio Grande do Sul.png'
 
@@ -53,7 +53,7 @@ function MenuBar() {
     paddingTop: "50px",
     }
     :{display:'none'}}>  
-    We acquired our dataset from the reputable source <a target="_blanck" href={"http://labren.ccst.inpe.br/atlas_2017.html"}>http://labren.ccst.inpe.br/atlas_2017.html</a>, a valuable resource for gathering data related to energy and environmental factors. This dataset formed the foundation for our geographical analysis, which aimed to shed light on the solar irradiation patterns across the southern Brazilian region, specifically focusing on the states of Paraná, Santa Catarina, and Rio Grande do Sul.
+    <b>We acquired our dataset from the reputable source <a target="_blanck" href={"http://labren.ccst.inpe.br/atlas_2017.html"}>http://labren.ccst.inpe.br/atlas_2017.html</a>, a valuable resource for gathering data related to energy and environmental factors. This dataset formed the foundation for our geographical analysis, which aimed to shed light on the solar irradiation patterns across the southern Brazilian region, specifically focusing on the states of Paraná, Santa Catarina, and Rio Grande do Sul.
 
 To carry out this study effectively, we initiated the process by dividing the dataset among the aforementioned Brazilian states. This division allowed us to isolate and concentrate our analysis on these specific regions. Furthermore, we combined the datasets from these states to construct a comprehensive representation of the entire southern Brazilian region.
 
@@ -65,7 +65,7 @@ In order to visualize our findings and present them in a comprehensible manner, 
 
 Lastly, our color-coded graphics featured a gradient that effectively conveyed the fluctuations in horizontal global irradiation indices throughout the year 2017. This color gradient provided a visual representation of areas where the highest and lowest solar irradiation levels were recorded. This information is vital for understanding the solar energy potential of different regions within southern Brazil and can be a valuable resource for energy planning and environmental analysis.
 
-In summary, our study was a data-driven exploration of solar irradiation patterns in the southern Brazilian region. Leveraging advanced data analysis techniques, machine learning algorithms, and data visualization tools, we aimed to provide valuable insights into the solar energy landscape of this region, which can inform sustainable energy policies and environmental decisions.
+In summary, our study was a data-driven exploration of solar irradiation patterns in the southern Brazilian region. Leveraging advanced data analysis techniques, machine learning algorithms, and data visualization tools, we aimed to provide valuable insights into the solar energy landscape of this region, which can inform sustainable energy policies and environmental decisions.</b>
 
     </div>
 
