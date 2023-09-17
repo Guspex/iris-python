@@ -2,7 +2,7 @@
 # Embedded python works in a shared memory with IRIS. 
 # Thus direct calls to IRIS classmethods, globals and tables are available via iris lib.
 
-print('Hello World')
+print('Machine Learning and Pandas functions')
 
 # Run IRIS Class Method 
 import iris
@@ -62,7 +62,7 @@ print_global(glname)
 def global_order_demo():
     gl=iris.gref("^EPython.Order")
     # set three indexes in unsorted order
-    list=["John","Jim","James"]
+    list=["André Dienes Friedrich","Henrique Matheus Savi","João Victor Prestes de Cruz","Lucca Gian Kolenez"]
     for key in list:
         gl.set([key],"")
     # print global indexes traversing via order function. Notice that indexes are sorted automatically

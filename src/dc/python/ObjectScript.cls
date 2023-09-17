@@ -4,7 +4,7 @@ Class dc.python.ObjectScript Extends (%CSP.REST, %REST.Impl)
 ClassMethod Test() As %Status
 {
     set a=42 
-    write "It works!"_a,!
+    write "It works!"_" "_a,!
     return a
 }
 
@@ -12,21 +12,20 @@ ClassMethod IrradiationAnalysis() As %Status
 {
 	Set tSC = $System.Status.OK()
 
-	Set tRetornoImagem = ..ExemploPython()
+	Set tRetornoImagem = ..Python()
 		
 	Set tSaida = {}
-    Do tSaida.%Set("arquivo",tRetornoImagem.Read())
+    Do tSaida.%Set("arquivo",tRetornoImagem)
 	Write tSaida
         
 	Quit tSC
 }
 
-ClassMethod ExemploPython() As %String [ Language = python ]
+ClassMethod Python() As %String [ Language = python ]
 {
 
 	import iris
 	import pandas as pd
-	from PIL import Image
 	import base64 as bs
 	import matplotlib.pyplot as plt
 	from sklearn.cluster import KMeans
@@ -73,15 +72,15 @@ ClassMethod ExemploPython() As %String [ Language = python ]
 
 		plt.legend()
 		plt.colorbar(scatter, label='Global horizontal irradiance W/m²')
-		plt.savefig('Your path on Docker'+labelState+'.png', dpi=150)
+		plt.savefig('~/home/irisowner/dev/src/'+labelState+'.png', dpi=150)
 		
 		print('Map done!')
 
 	def buildBinary(label):
 		base64_data = ''
-		binary = open('Your path on Docker'+label+'.png', 'rb').read()
+		binary = open('~/home/irisowner/dev/src/'+label+'.png', 'rb').read()
 		base64_data = 'data:image/png;base64,'+bs.b64encode(binary).decode('utf-8')
-		with open('Your path on Docker'+label+'.txt', 'w') as arquivo:
+		with open('~/home/irisowner/dev/src/'+label+'.txt', 'w') as arquivo:
 			arquivo.write(base64_data) 
 		print('Binary done!')
 
@@ -107,16 +106,16 @@ ClassMethod ExemploPython() As %String [ Language = python ]
 	irradiationAll = datasetSouth['ANNUAL'].tolist()
 	centersAll = kmeansCenters(datasetSouth)
 
-	##buildMap(datasetSouth, labelAll, irradiationAll, centersAll)
-	##buildMap(subsetPR, labelPR, irradiationPR, centersPR)
-	##buildMap(subsetSC, labelSC, irradiationSC, centersSC)
-	##buildMap(subsetRS, labelRS, irradiationRS, centersRS)
-	##buildBinary(labelPR)
-	##buildBinary(labelSC)
-	##buildBinary(labelRS)
-	##buildBinary(labelAll)
+	buildMap(datasetSouth, labelAll, irradiationAll, centersAll)
+	buildMap(subsetPR, labelPR, irradiationPR, centersPR)
+	buildMap(subsetSC, labelSC, irradiationSC, centersSC)
+	buildMap(subsetRS, labelRS, irradiationRS, centersRS)
+	buildBinary(labelPR)
+	buildBinary(labelSC)
+	buildBinary(labelRS)
+	buildBinary(labelAll)
 	
-	return "Done!"
+	return "Graphics and Binary files created"
 }
 
 }

@@ -13,6 +13,7 @@
   
   .menu-bar li {
     margin-right: 20px;
+    cursor:pointer;
   }
   
   .menu-bar a {
@@ -25,3 +26,10 @@
     text-decoration: underline;
   }
   
+
+  .imgGrafic{
+    width: 45%;
+    height: 45%;
+    display: block;
+    margin: 0 auto;
+  }
