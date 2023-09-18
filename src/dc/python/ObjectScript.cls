@@ -24,13 +24,18 @@ ClassMethod Python() As %String [ Language = python ]
  
 	import iris
 	import pandas as pd
+	import os
+	
 	import base64 as bs
 	import matplotlib.pyplot as plt
 	from sklearn.cluster import KMeans
 	from matplotlib.colors import Normalize
 	pd.options.mode.chained_assignment = None
 
-	datasetSouth = pd.read_csv('~/dev/data/dataset.csv', sep = ';')
+	os.environ["PYTHONIOENCODING"] = "utf-8"
+	
+
+	datasetSouth = pd.read_csv('~/dev/data/dataset.csv', sep = ';', encoding = 'utf-8')
 
 	kmeans = KMeans(n_clusters=5, random_state=0)
 
@@ -70,19 +75,17 @@ ClassMethod Python() As %String [ Language = python ]
 
 		plt.legend()
 		plt.colorbar(scatter, label='Global horizontal irradiance W/m²')
-		plt.savefig('~/home/irisowner/dev/src/'+labelState+'.png', dpi=150)
-		
+		plt.savefig('/home/irisowner/dev/src/'+labelState+'.png', dpi=150)
 		print('Map done!')
 
 	def buildBinary(label):
 		base64_data = ''
-		binary = open('~/home/irisowner/dev/src/'+label+'.png', 'rb').read()
+		binary = open('/home/irisowner/dev/src/'+label+'.png', 'rb').read()
 		base64_data = 'data:image/png;base64,'+bs.b64encode(binary).decode('utf-8')
-		with open('~/home/irisowner/dev/src/'+label+'.txt', 'w') as arquivo:
-			arquivo.write(base64_data) 
+		with open('/home/irisowner/dev/src/'+label+'.txt', 'w') as arquivo: arquivo.write(base64_data)
 		print('Binary done!')
 
-	labelPR = 'State of Paraná'
+	labelPR = 'State of Parana'
 	statePR = 'PR'
 	subsetPR = buildSubset(statePR)
 	irradiationPR = irradiationList(statePR)
