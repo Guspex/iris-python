@@ -32,9 +32,6 @@ ClassMethod Python() As %String [ Language = python ]
 	from matplotlib.colors import Normalize
 	pd.options.mode.chained_assignment = None
 
-	os.environ["PYTHONIOENCODING"] = "utf-8"
-	
-
 	datasetSouth = pd.read_csv('~/dev/data/dataset.csv', sep = ';', encoding = 'utf-8')
 
 	kmeans = KMeans(n_clusters=5, random_state=0)
@@ -69,13 +66,14 @@ ClassMethod Python() As %String [ Language = python ]
 		return(irradiation)
 
 	def buildMap(dataset, labelState, irradiation, centers):
+		plt.figure()
 		scatter = plt.scatter(dataset['LON'], dataset['LAT'], c=irradiation, cmap='autumn_r', label=labelState)
 		centers = centers
 		plt.scatter(centers[:, 0], centers[:, 1], c='black', s=50, alpha=0.5)
 
 		plt.legend()
 		plt.colorbar(scatter, label='Global horizontal irradiance W/m²')
-		plt.savefig('/home/irisowner/dev/src/'+labelState+'.png', dpi=150)
+		plt.savefig('/home/irisowner/dev/src/'+labelState+'.png', dpi=300)
 		print('Map done!')
 
 	def buildBinary(label):
