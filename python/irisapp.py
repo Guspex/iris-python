@@ -8,7 +8,7 @@ print('Machine Learning and Pandas functions')
 import iris
 
 print("Method call:")
-print(iris.cls('dc.python.ObjectScript').Test())
+print(iris.cls('dc.python.ObjectScript').IrradiationAnalysis())
 
 # function to return IRIS version
 def iris_version():

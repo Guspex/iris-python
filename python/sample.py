@@ -6,17 +6,15 @@ def hello():
 
 def meanage(filename):
     # Read data
-    titanic = pd.read_csv(filename,",")
+    dataset = pd.read_csv(filename,";")
 
     # Set passenger ages to a NumPy array
-    passenger_ages = titanic['Age']
-    #print(passenger_ages)
+    mean = dataset['ANNUAL']
+    #print(mean)
 
     # Use numpy to calculate the mean age of passengers
-    mean_age = np.nanmean(passenger_ages)
+    mean_age = np.nanmean(mean)
 
     #print(mean_age)
 
     return str(mean_age)
-
-# print(meanage("/home/irisowner/dev/data/titanic.csv"))
