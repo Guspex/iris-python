@@ -54,7 +54,7 @@ docker run --rm -it containers.intersystems.com/intersystems/passwordhash:1.1 -a
 
 ### Working with IRIS from Embedded Python
 
-#### Run the python script in iris container:
+### Run the python script in iris container:
 
 ```bash
 # attach to the running IRIS container
@@ -62,6 +62,24 @@ docker-compose exec iris bash
 # run the script
 $ irispython ./python/irisapp.py
 ```
+## Run the python script with NoObjectScriptLine
+### run the script
+```bash
+$ irispython ./python/sample.py
+```
+
+## Run the python script in local machine
+ - But for this are necessery install the requirements.txt localy and change the paths.
+ - on terminal to install the requirements.txt, do 
+ ```bash
+ $ pip3 install -r requirements.txt
+ ```
+ - Change the path on lines 13, 54, 59, 61, to the local directory.
+ - Then you can run the script, if you are using the VSCode have the Play button on screen or if you want could run directly in terminal.
+ - To run the script in terminal navigate at the folder python and run the command 
+ ```bash
+ $ python sample.py
+ ```
 
 The script contains different samples of working with IRIS from python and goes through it.
 it should return something like this:
