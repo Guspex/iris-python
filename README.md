@@ -98,7 +98,7 @@ Lucca Gian Kolenez
 ## Run the python script with NoObjectScriptLine
 ### run the script
 ```bash
-$ irispython ./python/sample.py
+$ irispython ./python/NoObjectScript.py
 ```
 
 ## Run the python script in local machine
@@ -111,7 +111,7 @@ $ irispython ./python/sample.py
  - Then you can run the script, if you are using the VSCode have the Play button on screen or if you want could run directly in terminal.
  - To run the script in terminal navigate at the folder python and run the command 
  ```bash
- $ python sample.py
+ $ python NoObjectScript.py
  ```
 
 
