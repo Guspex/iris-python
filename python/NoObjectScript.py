@@ -5,9 +5,6 @@ import matplotlib.pyplot as plt
 from sklearn.cluster import KMeans
 from matplotlib.colors import Normalize
 
-def hello():
-    return "world"
-
 pd.options.mode.chained_assignment = None
 
 datasetSouth = pd.read_csv('~/dev/data/dataset.csv', sep = ';', encoding = 'utf-8')
@@ -93,18 +90,3 @@ buildBinary(labelRS)
 buildBinary(labelAll) 
 
 print( "Graphics and Binary files created")
-
-def meanage(filename):
-    # Read data
-    dataset = pd.read_csv(filename,";")
-
-    # Set passenger ages to a NumPy array
-    mean = dataset['ANNUAL']
-    #print(mean)
-
-    # Use numpy to calculate the mean age of passengers
-    mean_age = np.nanmean(mean)
-
-    #print(mean_age)
-
-    return str(mean_age)
