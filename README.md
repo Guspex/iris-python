@@ -145,6 +145,14 @@ To do this, make sure that the docker volume path was created and is correct in 
 
 ```objectscript
 IRISAPP>d ##class(dc.python.ObjectScript).IrradiationAnalysis()
+Map done!
+Map done!
+Map done!
+Map done!
+Binary done!
+Binary done!
+Binary done!
+Binary done!
 Graphics and Binary files created
 ```
 
