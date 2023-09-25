@@ -19,9 +19,13 @@ In summary, our study was a data-driven exploration of solar irradiation pattern
 PS. If you are unable to run the volume in Docker to create the files via code, we have already made the files ready for viewing in Front so you can get an idea of ​​how the tool works.
 
 ### Participants
+
 André Dienes Friedrich - https://github.com/Guspex
+
 Henrique Matheus Savi - 
+
 João Victor Prestes da Cruz - https://github.com/PrestesJoo149
+
 Lucca Gian Kolenez - https://github.com/LuccaGianKolenezBPlus
 
 ## Prerequisites 
