@@ -68,8 +68,15 @@ it should return something like this:
 ```
 Machine Learning and Pandas functions
 Method call:
-It works! 42
-42
+Map done!
+Map done!
+Map done!
+Map done!
+Binary done!
+Binary done!
+Binary done!
+Binary done!
+Graphics and Binary files created
 Iris Version:
 IRIS for UNIX (Ubuntu Server LTS for x86-64 Containers) 2023.2 (Build 227U) Mon Jul 31 2023 18:04:28 EDT
 Creating new record in dc.python.PersistentClass
