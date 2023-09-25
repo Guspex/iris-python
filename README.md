@@ -102,6 +102,11 @@ João Victor Prestes de Cruz
 Lucca Gian Kolenez
 ```
 
+```bash
+# to Exit
+$ exit
+```
+
 ## Run the python script with NoObjectScriptLine
 ### run the script
 ```bash
@@ -120,13 +125,6 @@ $ irispython ./python/NoObjectScript.py
  ```bash
  $ python NoObjectScript.py
  ```
-
-
-
-```bash
-# to Exit
-$ exit
-```
 
 ### Working with Python libs from ObjectScript
 Open IRIS terminal:
